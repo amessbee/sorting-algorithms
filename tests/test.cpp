@@ -73,7 +73,7 @@ void testHeapSort(vector<int>& arr) {
 
 int main() {
     // Test configurations
-    const vector<int> sizes = {10000, 100000, 1000000};
+    const vector<int> sizes = {50000, 500000, 9000000};
     const int numTrials = 5;
     vector<SortResult> results;
     
@@ -82,9 +82,9 @@ int main() {
         {"QuickSort", testQuickSort},
         {"MergeSort", testMergeSort},
         {"HeapSort", testHeapSort},
-        {"BucketSort", bucketSort},
+        // {"BucketSort", bucketSort},
         {"RadixSort", radixSort},
-        {"CountingSort", [](vector<int>& arr) { countingSort(arr, 1000000); }}
+        {"CountingSort", [](vector<int>& arr) { countingSort(arr, 10000000); }}
     };
 
     for (const auto& algo : algorithms) {
