@@ -50,20 +50,12 @@ cmake ..
 make
 ```
 
-## Running the Algorithms
-
-After building, you can run the main application to see the sorting algorithms in action:
-
-```bash
-./sorting-algorithms
-```
-
 ## Running Tests
 
 To run the tests, you can use the following command after building:
 
 ```bash
-./tests/test_suite
+ g++ -std=c++11 tests/test.cpp src/algorithms/*.cpp -I src/algorithms -o sorting_test && ./sorting_test 
 ```
 
 ## Contributing
